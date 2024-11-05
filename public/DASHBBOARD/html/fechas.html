@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fechas</title>
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!-- ANIMATE CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href="/public/css/RC.css">
+    <link rel="stylesheet" href="/public/html/css/acerca-de.css">
+    <link rel="stylesheet" href="/public/html/css/footer.css">
+    <link rel="stylesheet" href="/public/DASHBBOARD/css/fechas.css">
+</head>
+
+<!-- Sección del Navbar -->
+<body class="bg-light">
+    <nav class="navbar">
+        <div class="logo-container">
+            <!-- Logo -->
+            <a href="/public/html/RC.html" class="logo">RAICES CAÑETANAS</a>
+        </div>
+
+        <ul class="nav-menu">
+            <li>
+                <a href="/public/html/RC.html" class="nav-link active">Inicio</a>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="nav-link">Tienda Online</a>
+                <ul class="submenu">
+                    <li><a href="/public/panes/panaderia.html" class="submenu-link">Panadería</a></li>
+                    <li><a href="/public/panes/postres.html" class="submenu-link">Postres</a></li>
+                    <li><a href="/public/panes/pasteles-salados.html" class="submenu-link">Pasteles Salados</a></li>
+                    <li><a href="/public/panes/bolleria.html" class="submenu-link">Bollería</a></li>
+                </ul>
+            </li>
+            <li><a href="/public/html/nuestra-historia.html" class="nav-link">Nuestra Historia</a></li>
+            <li><a href="/public/html/acerca-de.html" class="nav-link">Acerca de</a></li>
+            <li><a href="/public/html/contacto.html" class="nav-link">Contacto</a></li>
+            <li><a href="/public/Dashboard.html" class="nav-link salir-btn">Salir</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sección del banner con imagen -->
+    <section class="banner">
+        <img src="https://img.freepik.com/fotos-premium/pagina-calendario-cerca-sobre-fondo-azul-concepto-reunion-cita-planificacion-empresarial_293060-4508.jpg?w=360" alt="Nuestra Historia"
+            class="banner-img">
+        <div class="banner-text">
+            <h1>FECHAS</h1>
+        </div>
+    </section>
+
+    <!-- Sección de Calendario de Eventos -->
+    <section class="calendario-eventos">
+        <h1>Calendario de Eventos</h1>
+        <form id="eventoForm"  enctype="multipart/form-data">
+            <input type="text" id="titulo" name="titulo" placeholder="Título" required>
+            <input type="text" id="descripcion" name="descripcion" placeholder="Descripción">
+            <input type="date" id="fecha" name="fecha" required>
+            <input type="file" id="imagen" name="imagen" accept="image/*" required>
+            <button type="submit">Agregar Evento</button>
+        </form>
+        <div id="calendar">
+            <h2>Eventos Agregados</h2>
+            <ul id="eventList">
+                <!-- Aquí se cargarán los eventos -->
+            </ul>
+        </div>
+    </section>
+
+
+    <!-- Sección de Pie de Página -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Nuestro objetivo (Izquierda) -->
+            <div class="footer-informacion">
+                <h3>Nuestro objetivo</h3>
+                <p>Ser una organización que promueve la igualdad, la inclusión y el desarrollo sostenible en América
+                    Latina.</p>
+            </div>
+            <!-- Contacto (Centro) -->
+            <div class="footer-content">
+                <h3>Contacto</h3>
+                <p>
+                    Calle 123, 456, CABA<br>
+                    Teléfono: +54 11 1234 5678<br>
+                    Email: info@raicescanetanas.com
+                </p>
+            </div>
+            <!-- Redes Sociales (Derecha) -->
+            <div class="footer-social">
+                <h3>Síguenos en redes sociales</h3>
+                <div class="social-icons">
+                    <a href="#" class="youtube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="tiktok"><i class="fab fa-tiktok"></i></a>
+                    <a href="#" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Archivo JS -->
+    <!-- FullCalendar CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.11.3/main.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.11.3/main.min.js"></script>
+    <script src="/public/js/RC.js"></script>
+    <script src="/public/js/footer.js"></script>
+    <script src="/public/DASHBBOARD/js/fechas.js"></script>
+
+</body>
+
+</html>

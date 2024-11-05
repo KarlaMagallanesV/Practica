@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raices Cañetanas - Tienda Online</title>
+    <link rel="stylesheet" href="/css/RC.css">
+    <link rel="stylesheet" href="/panes/css/postres.css">
+    <style>
+        
+    </style>
+</head>
+<body class="bg-light">
+    <nav class="navbar">
+        <div class="logo-container">
+            <!-- Logo -->
+            <a href="/html/RC.html" class="logo">RAICES CAÑETANAS</a>
+        </div>
+
+        <ul class="nav-menu">
+            <li>
+                <a href="/html/RC.html" class="nav-link active">Inicio</a>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="nav-link">Tienda Online</a>
+                <ul class="submenu">
+                    <li><a href="/panes/panaderia.html" class="submenu-link">Panadería</a></li>
+                    <li><a href="/panes/postres.html" class="submenu-link">Postres</a></li>
+                    <li><a href="/panes/pasteles-salados.html" class="submenu-link">Pasteles Salados</a></li>
+                    <li><a href="/panes/bolleria.html" class="submenu-link">Bollería</a></li>
+                </ul>
+            </li>
+            <li><a href="/html/nuestra-historia.html" class="nav-link">Nuestra Historia</a></li>
+            <li><a href="/html/acerca-de.html" class="nav-link">Acerca de</a></li>
+            <li><a href="/html/contacto.html" class="nav-link">Contacto</a></li>
+            <li><a href="/Dashboard.html" class="nav-link salir-btn">Salir</a></li>
+            <li>
+                <span class="cart-icon" onclick="toggleCart()">🛒 <span class="cart-count" id="cart-count">0</span></span>
+            </li>
+        </ul>
+    </nav>
+
+
+    <!-- Productos -->
+<section class="galeria-panes">
+    <h2>POSTRES</h2>
+    <div class="productos">
+        <div class="producto-item">
+            <img src="/postres/croissant-churro.webp" alt="Croissant churro">
+            <h3>Croissant churro</h3>
+            <p>S/ 12.00</p>
+            <button class="add-to-cart-btn" onclick="addToCart('Croissant churro', 12)">Agregar al carrito</button>
+        </div>
+        <div class="producto-item">
+            <img src="/postres/tarta-fresas.webp" alt="tarta de fresas">
+            <h3>Tarta de fresas</h3>
+            <p>S/ 18.00</p>
+            <button class="add-to-cart-btn" onclick="addToCart('Tarta de fresas', 18)">Agregar al carrito</button>
+        </div>
+        <div class="producto-item">
+            <img src="/postres/tarta-chocolate-avellana-porcion.webp" alt="Tarta de choco avellana porción">
+            <h3>Tarta de choco avellana porción</h3>
+            <p>S/ 22.00</p>
+            <button class="add-to-cart-btn" onclick="addToCart('Tarta de choco avellana porción', 22)">Agregar al carrito</button>
+        </div>
+        <div class="producto-item">
+            <img src="/postres/jar-tres-lehces.webp" alt="Jar de Tres Leches">
+            <h3>Jar de Tres Leches</h3>
+            <p>S/ 20.00</p>
+            <button class="add-to-cart-btn" onclick="addToCart('Jar de Tres Leches', 20)">Agregar al carrito</button>
+        </div>
+        <div class="producto-item">
+            <img src="/postres/budin-croissant.webp" alt="Budin de croissant">
+            <h3>Budin de croissant</h3>
+            <p>S/ 18.00</p>
+            <button class="add-to-cart-btn" onclick="addToCart('Budin de croissant', 18)">Agregar al carrito</button>
+        </div>
+        <div class="producto-item">
+            <img src="/postres/tarta-vasca-porcion.webp" alt="Tarta vasca porción">
+            <h3>Tarta vasca porción</h3>
+            <p>S/ 23.00</p>
+            <button class="add-to-cart-btn" onclick="addToCart('Tarta vasca porción', 23)">Agregar al carrito</button>
+        </div>
+        <div class="producto-item">
+            <img src="/postres/pie-limon.webp" alt="Pie de limón">
+            <h3>Pie de limón</h3>
+            <p>S/ 18.00</p>
+            <button class="add-to-cart-btn" onclick="addToCart('Pie de limón', 18)">Agregar al carrito</button>
+        </div>
+        <div class="producto-item">
+            <img src="/postres/brownie.webp" alt="Brownie">
+            <h3>Brownie</h3>
+            <p>S/ 8.00</p>
+            <button class="add-to-cart-btn" onclick="addToCart('Brownie', 8)">Agregar al carrito</button>
+        </div>
+        <div class="producto-item">
+            <img src="/postres/alfajor-clasico.webp" alt="Alfajor clásico">
+            <h3>Alfajor clásico</h3>
+            <p>S/ 7.00</p>
+            <button class="add-to-cart-btn" onclick="addToCart('Alfajor clásico', 7)">Agregar al carrito</button>
+        </div>
+        <div class="producto-item">
+            <img src="/postres/alfajor-cristina.webp" alt="Alfajor La Cristina">
+            <h3>Alfajor La Cristinaa</h3>
+            <p>S/ 12.00</p>
+            <button class="add-to-cart-btn" onclick="addToCart('Alfajor La Cristina', 12)">Agregar al carrito</button>
+        </div>
+        <div class="producto-item">
+            <img src="/postres/budin-croissant-molde.webp" alt="Budin de croissant molde">
+            <h3>Budin de croissant molde</h3>
+            <p>S/ 70.00</p>
+            <button class="add-to-cart-btn" onclick="addToCart('Budin de croissant molde', 70)">Agregar al carrito</button>
+        </div>
+        <div class="producto-item">
+            <img src="/postres/tarta-queso.webp" alt="Tarta de queso">
+            <h3>Tarta de queso</h3>
+            <p>S/ 160.00</p>
+            <button class="add-to-cart-btn" onclick="addToCart('Tarta de queso', 160)">Agregar al carrito</button>
+        </div>
+        <div class="producto-item">
+            <img src="/postres/tarta-chocolate-avellana-porcion.webp" alt="Tarta de choco avellana molde entero">
+            <h3>Tarta de choco avellana molde entero</h3>
+            <p>S/ 100.00</p>
+            <button class="add-to-cart-btn" onclick="addToCart('Tarta de choco avellana molde entero', 100)">Agregar al carrito</button>
+        </div>
+        <div class="producto-item">
+            <img src="/postres/pavlova-chirimoya.webp" alt="Pavlova de Chirimoya">
+            <h3>Pavlova de Chirimoya</h3>
+            <p>S/ 20.00</p>
+            <button class="add-to-cart-btn" onclick="addToCart('Pavlova de Chirimoya', 20)">Agregar al carrito</button>
+        </div>
+        <div class="producto-item">
+            <img src="/postres/keke-limon.webp" alt="Keke de limón">
+            <h3>Keke de limón</h3>
+            <p>S/ 40.00</p>
+            <button class="add-to-cart-btn" onclick="addToCart('Keke de limón', 40)">Agregar al carrito</button>
+        </div>
+        <div class="producto-item">
+            <img src="/postres/pie-limon.webp" alt="Pie de limón">
+            <h3>Pie de limón</h3>
+            <p>S/ 80.00</p>
+            <button class="add-to-cart-btn" onclick="addToCart('Tarta de chocolate', 80)">Agregar al carrito</button>
+        </div>
+        <div class="producto-item">
+            <img src="/postres/tarta-chocolate.webp" alt="Tarta de chocolate">
+            <h3>Tarta de chocolate</h3>
+            <p>S/ 22.00</p>
+            <button class="add-to-cart-btn" onclick="addToCart('Tarta de chocolate', 22)">Agregar al carrito</button>
+        </div>
+        <div class="producto-item">
+            <img src="/postres/profiteol-fresas.webp" alt="Profiterol XL de fresas">
+            <h3>Profiterol XL de fresas</h3>
+            <p>S/ 20.00</p>
+            <button class="add-to-cart-btn" onclick="addToCart('Profiterol XL de fresas', 20)">Agregar al carrito</button>
+        </div>
+        <div class="producto-item">
+            <img src="/postres/tiramisu.webp" alt="Tiramisú">
+            <h3>Tiramisú</h3>
+            <p>S/ 24.00</p>
+            <button class="add-to-cart-btn" onclick="addToCart('Tiramisú', 24)">Agregar al carrito</button>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay" onclick="toggleCart()"></div>
+    
+    <!-- Detalles del Carrito -->
+    <div class="cart-details" id="cart-details">
+        <h3>🛒 Carrito de compras</h3>
+        <div id="cart-items" class="cart-items"></div>
+        <p class="cart-total">💰 Total: S/ <span id="cart-total">0</span></p>
+        <button class="finalize-btn" onclick="finalizePurchase()">🌌 Finalizar compra</button>
+    </div>
+
+
+    
+    <script src="/panes/js/postres.js"></script>
+    <script src="/js/RC.js"></script>
+</body>
+</html>

@@ -1,0 +1,321 @@
+/* Icono del Carrito */
+.cart-icon {
+    position: relative;
+    font-size: 2rem;
+    color: #333;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.cart-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Contador del Carrito */
+.cart-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 6px 10px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Productos */
+.producto-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s;
+}
+
+.producto-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Botón Agregar al Carrito */
+.add-to-cart-btn {
+    background-color: #f0c14b;
+    border: 1px solid #a88734;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #ddb347;
+    transform: scale(1.05);
+}
+
+/* Detalles del Carrito */
+.cart-details {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    width: 350px;
+    background-color: #fff;
+    padding: 30px;
+    border-left: 3px solid #ccc;
+    box-shadow: -4px 0 15px rgba(0, 0, 0, 0.15);
+    transform: translateY(-50%) translateX(100%);
+    transition: transform 0.5s ease-in-out;
+    z-index: 1000;
+    border-radius: 10px 0 0 10px;
+}
+
+/* Estado Activo del Carrito */
+.cart-details.active {
+    transform: translateY(-50%) translateX(0);
+}
+
+/* Items del Carrito */
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fafafa;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.cart-item span {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Botón Eliminar */
+.remove-item-btn {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.remove-item-btn:hover {
+    background-color: #e60000;
+}
+
+/* Total del Carrito */
+.cart-total {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    text-align: right;
+}
+
+/* Botón Finalizar Compra */
+.finalize-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.finalize-btn:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+/* Carrito Vacío */
+.empty-cart {
+    text-align: center;
+    color: #888;
+    font-style: italic;
+    margin-top: 20px;
+    font-size: 1rem;
+}
+
+/* Animación para la transición del carrito */
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+
+
+/* Efecto cuando se abre/cierra el carrito */
+@keyframes slideIn {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOut {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+.cart-details.active {
+    animation: slideIn 0.7s ease-in-out forwards;
+}
+
+.cart-details:not(.active) {
+    animation: slideOut 0.7s ease-in-out forwards;
+}
+
+
+/* Modal compras*/
+/* Overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(0,0,50,0.8), rgba(50,0,100,0.8));
+    z-index: 999;
+    display: none;
+    transition: opacity 0.5s ease;
+}
+
+.overlay.active {
+    display: block;
+    opacity: 1;
+}
+
+/* Detalles del Carrito */
+.cart-details {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    width: 400px;
+    background: linear-gradient(135deg, #1f1f2e, #3a3a5f);
+    padding: 30px;
+    border-left: 2px solid #4a4a8c;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+    transform: translateY(-50%) translateX(100%);
+    transition: transform 0.5s ease-in-out;
+    z-index: 1000;
+    border-radius: 10px 0 0 10px;
+    color: #fff;
+}
+
+.cart-details h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    color: #f0e68c;
+    text-align: center;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#fff ;
+    margin: 10px 0;
+    padding: 10px 15px;
+    border-radius: 8px;
+
+}
+
+.cart-item span {
+    font-size: 1rem;
+}
+
+.remove-item-btn {
+    background-color: #ff5c5c;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s;
+}
+
+.remove-item-btn:hover {
+    background-color: #ff2d2d;
+    transform: rotate(360deg) scale(1.2);
+}
+
+/* Botón Finalizar Compra */
+.finalize-btn {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(45deg, #4CAF50, #45a049);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: white;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.finalize-btn:hover {
+    background-color: #3b8b3b;
+    transform: scale(1.1);
+}
+
+/* Total */
+.cart-total {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: right;
+    margin-top: 10px;
+}
+
+/* Botón Agregar al Carrito */
+.add-to-cart-btn {
+    background-color: #fd8903;
+    color: #ffffff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #ffa500;
+    transform: scale(1.1);
+}
+

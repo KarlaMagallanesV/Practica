@@ -1,0 +1,377 @@
+/* ------------------------------------------------------------ */
+/* Borde Equipo */
+@keyframes borderColor {
+    0% {
+        border-color: rgb(255, 0, 0); /* Rojo */
+    }
+    16% {
+        border-color: rgb(255, 165, 0); /* Naranja */
+    }
+    33% {
+        border-color: rgb(255, 255, 0); /* Amarillo */
+    }
+    50% {
+        border-color: rgb(0, 255, 0); /* Verde */
+    }
+    66% {
+        border-color: rgb(0, 255, 255); /* Cian */
+    }
+    83% {
+        border-color: rgb(0, 0, 255); /* Azul */
+    }
+    100% {
+        border-color: rgb(255, 0, 255); /* Magenta */
+    }
+}
+
+/* ------------------------------------------------------------ */
+/* Sección del Equipo */
+.team-section {
+    text-align: center;
+    padding: 50px;
+    background-color: #f9f9f9;
+}
+
+.team-title {
+    font-size: 2rem;
+    color: #1a73e8; /* Cambiado a azul */
+    margin-bottom: 10px;
+}
+
+.team-subtitle {
+    font-size: 1.2rem;
+    color: #777;
+    margin: 20px 0; /* Margen para separar del título */
+}
+
+.team-description {
+    font-size: 1rem;
+    color: #555;
+    margin: 20px 0; /* Margen para separar del subtítulo */
+}
+
+.team-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.team-member {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    text-align: center;
+    transition: transform 0.3s;
+    overflow: hidden;
+    border: 5px solid transparent; 
+    animation: borderColor 3s linear infinite; 
+}
+
+.profile-img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    transition: transform 0.5s ease;
+}
+
+.team-member h5 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.team-member p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+    max-height: 100px; 
+    overflow: hidden; 
+    transition: max-height 0.5s ease;
+}
+
+.team-member.active p {
+    max-height: 300px; 
+}
+
+.team-member .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.team-member .social-links a {
+    font-size: 1.5rem;
+    color: #555;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+}
+
+.team-member:hover .profile-img {
+    transform: rotate(10deg);
+}
+
+.team-member .social-links a:hover {
+    color: #007bff;
+    transform: scale(1.2);
+}
+
+
+/* ------------------------------------------------------------------------- */
+
+/*Preguntas Frecuentes*/
+
+
+/* pregunta1*/
+.preguntas1-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background-color: #f8f8f8;
+}
+
+.preguntas1-text {
+    width: 50%;
+    padding-right: 20px;
+}
+
+.preguntas1-text h2 {
+    font-size: 2.5rem;
+    color: #E76A24;
+}
+
+.preguntas1-text p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+
+.preguntas1-image {
+    width: 45%;
+}
+
+.preguntas1-img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+/* --------------------------------------------------------- */
+/* preguntas2 */
+
+.preguntas-frecuentes {
+    text-align: center;  
+    color: #e03b3b;     
+    font-size: 2.5rem;  
+    margin: 20px 0;     
+}
+
+.preguntas2-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background-color: #f8f8f8;
+}
+
+.preguntas2-propuestos-image {
+    width: 45%;
+}
+
+.preguntas2-img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.preguntas2-text {
+    width: 50%;
+    padding-left: 20px;
+}
+
+.preguntas2-text h2 {
+    font-size: 2.5rem;
+    color: #E76A24;
+}
+
+.preguntas2-text p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+
+/* --------------------------------------------------------- */
+/* preguntas3 */
+.preguntas3-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background-color: #f8f8f8;
+}
+
+.preguntas3-propuestos-image {
+    width: 45%;
+}
+
+.preguntas3-img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.preguntas3-text {
+    width: 50%;
+    padding-left: 20px;
+}
+
+.preguntas3-text h2 {
+    font-size: 2.5rem;
+    color: #E76A24;
+}
+
+.preguntas3-text p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+
+/* ----------------------------------------------------------------------- */
+/* Estilos para el formulario con colores frescos */
+body {
+    background: linear-gradient(135deg, #3BAFDA 0%, #1D7F74 100%);
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #34D399;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    font-weight: bold;
+}
+
+.form-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.form-left, .form-right {
+    width: 48%;
+    background: linear-gradient(135deg, #E0F7FA 0%, #A7FFEB 100%);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.form-left:hover, .form-right:hover {
+    transform: scale(1.03);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.form-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #1D7F74;
+    border-left: 3px solid #3BAFDA;
+    padding-left: 5px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #E3F2FD;
+    transition: border-color 0.3s, background 0.3s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #3BAFDA;
+    box-shadow: 0 0 10px rgba(59, 175, 218, 0.5);
+    background-color: #E0F7FA;
+}
+
+.error {
+    color: #E57373;
+    font-size: 0.9rem;
+    font-weight: bold;
+    display: none; /* Ocultar por defecto */
+    margin-top: 5px; /* Espacio superior para separar del input */
+}
+
+.gender-group {
+    display: flex;
+    justify-content: space-around;
+    color: #1D7F74;
+    font-size: 1rem;
+}
+
+.submit-btn {
+    background: linear-gradient(135deg, #3BAFDA, #1D7F74);
+    color: white;
+    padding: 12px 0;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.submit-btn:hover {
+    background-color: #115E59;
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Iconos y etiquetas personalizadas */
+.form-group label i {
+    color: #3BAFDA;
+    margin-right: 5px;
+}

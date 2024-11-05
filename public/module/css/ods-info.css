@@ -1,0 +1,174 @@
+.halion-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch; /* Cambiado de center a stretch para que todos los elementos tengan la misma altura */
+    gap: 20px; 
+    padding: 40px;
+    background-color: #f4f4f4;
+}
+
+/* Estilo general para las tarjetas halion */
+.halion {
+    flex: 1 1 50%;
+    max-width: 50%;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+    text-align: center;
+    height: 400px; 
+}
+
+.halion h1 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.halion p {
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.halion button {
+    font-size: 1em;
+    color: #ffffff;
+    background-color: #4CAF50; 
+    border: none;
+    border-radius: 25px;
+    padding: 12px 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: bold;
+}
+
+.halion button:hover {
+    background-color: #45a049;
+    transform: scale(1.05); 
+}
+
+.halion button:active {
+    transform: scale(0.95);
+}
+
+/* -------------------------------------------------------------------------- */
+
+.ds {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.ds-text {
+    position: relative;
+    width: 250px;
+    height: 480px; 
+    flex: 1;
+}
+
+.ds-slide {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 15px;
+    position: absolute;
+    transition: opacity 0.6s ease-in-out;
+    opacity: 0;
+    z-index: 1;
+}
+
+.ds-slide.active {
+    opacity: 1;
+    z-index: 2;
+}
+
+.ds-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: transform 0.5s ease;
+}
+
+.ODS  {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #cccccc;
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    padding: 20px;
+    transform: translateY(100%);
+    transition: transform 0.5s ease;
+}
+
+.overlay p {
+    color: white; 
+}
+
+
+
+.ds-slide:hover .overlay {
+    transform: translateY(0%);
+}
+
+.ds-slide:hover img {
+    transform: scale(0.98);
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 1200px) {
+    .halion {
+        flex: 1 1 40%; /* Se reduce el ancho en pantallas medianas */
+        max-width: 40%;
+    }
+    .ds-text {
+        width: 200px; /* Ajuste en el ancho de la sección de texto */
+        height: 400px; /* Ajustar la altura también */
+    }
+}
+
+@media (max-width: 992px) {
+    .halion {
+        flex: 1 1 90%; /* Las tarjetas ocupan más ancho en pantallas más pequeñas */
+        max-width: 90%;
+    }
+    .ds {
+        flex-direction: column; /* Cambiar a columna para pantallas más pequeñas */
+    }
+    .ds-text {
+        width: 100%; /* Permitir que la sección de texto ocupe todo el ancho */
+        height: auto; /* Permitir que la altura se ajuste */
+    }
+}
+
+@media (max-width: 576px) {
+    .halion-container {
+        padding: 20px; /* Menos padding en pantallas muy pequeñas */
+    }
+    .halion h1 {
+        font-size: 1.5em; /* Disminuir el tamaño de la fuente del título */
+    }
+    .halion p {
+        font-size: 1em; /* Disminuir el tamaño de la fuente del párrafo */
+    }
+    .halion button {
+        padding: 10px 20px; /* Menos padding en botones */
+    }
+}

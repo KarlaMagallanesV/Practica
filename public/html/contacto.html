@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acerca de | Contacto</title>
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!-- ANIMATE CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href="/css/RC.css">
+    <link rel="stylesheet" href="/html/css/acerca-de.css">
+    <link rel="stylesheet" href="/html/css/footer.css">
+    <link rel="stylesheet" href="/html/css/contactanos.css">
+</head>
+<!-- Sección del Navbar -->
+<body class="bg-light">
+    <nav class="navbar">
+        <div class="logo-container">
+            <!-- Logo -->
+            <a href="/html/RC.html" class="logo">RAICES CAÑETANAS</a>
+        </div>
+
+        <ul class="nav-menu">
+            <li>
+                <a href="/html/RC.html" class="nav-link active">Inicio</a>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="nav-link">Tienda Online</a>
+                <ul class="submenu">
+                    <li><a href="/panes/panaderia.html" class="submenu-link">Panadería</a></li>
+                    <li><a href="/panes/postres.html" class="submenu-link">Postres</a></li>
+                    <li><a href="/panes/pasteles-salados.html" class="submenu-link">Pasteles Salados</a></li>
+                    <li><a href="/panes/bolleria.html" class="submenu-link">Bollería</a></li>
+                </ul>
+            </li>
+            <li><a href="/html/nuestra-historia.html" class="nav-link">Nuestra Historia</a></li>
+            <li><a href="/html/acerca-de.html" class="nav-link">Acerca de</a></li>
+            <li><a href="/html/contacto.html" class="nav-link">Contacto</a></li>
+            <li><a href="/Dashboard.html" class="nav-link salir-btn">Salir</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sección del banner con imagen -->
+    <section class="banner">
+        <img src="https://lacristina.pe/cdn/shop/files/market_-_desktop_720x.jpg?v=1677084830" alt="Nuestra Historia"
+            class="banner-img">
+        <div class="banner-text">
+            <h1>Nuestra Tienda</h1>
+        </div>
+    </section>
+
+    <!-- Sección de Contactanos -->
+    <section class="contact-rc">
+        <h1 class="logo">Contáctanos</h1>
+        <div class="contact-wrapper animated bounceInUp">
+            <div class="contact-form">
+                <h3>Contáctanos</h3>
+                <form id="contactForm">
+                    <p>
+                        <label>Nombres:</label>
+                        <input type="text" id="firstName" name="firstname">
+                        <span class="error-message" id="firstNameError"></span>
+                    </p>
+                    <p>
+                        <label>Apellidos:</label>
+                        <input type="text" id="lastName" name="lastname">
+                        <span class="error-message" id="lastNameError"></span>
+                    </p>
+                    <p>
+                        <label>Correo Electrónico:</label>
+                        <input type="email" id="email" name="email">
+                        <span class="error-message" id="emailError"></span>
+                    </p>
+                    <p>
+                        <label>Número de Teléfono:</label>
+                        <input type="tel" id="phone" name="phone">
+                        <span class="error-message" id="phoneError"></span>
+                    </p>
+                    <p class="block">
+                        <label>Mensaje:</label>
+                        <textarea id="message" name="message" rows="3"></textarea>
+                        <span class="error-message" id="messageError"></span>
+                    </p>
+                    <p class="block">
+                        <button type="submit">Enviar</button>
+                    </p>
+                </form>
+            </div>
+            <div class="contact-info">
+                <h4>Más Información</h4>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> Calle Baker</li>
+                    <li><i class="fas fa-phone"></i> (111) 111 111 111</li>
+                    <li><i class="fas fa-envelope-open-text"></i> contacto@website.com</li>
+                </ul>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero provident ipsam necessitatibus
+                    repellendus?</p>
+                <p>Company.com</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Sección de Pie de Página -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Nuestro objetivo (Izquierda) -->
+            <div class="footer-informacion">
+                <h3>Nuestro objetivo</h3>
+                <p>Ser una organización que promueve la igualdad, la inclusión y el desarrollo sostenible en América
+                    Latina.</p>
+            </div>
+            <!-- Contacto (Centro) -->
+            <div class="footer-content">
+                <h3>Contacto</h3>
+                <p>
+                    Calle 123, 456, CABA<br>
+                    Teléfono: +54 11 1234 5678<br>
+                    Email: info@raicescanetanas.com
+                </p>
+            </div>
+            <!-- Redes Sociales (Derecha) -->
+            <div class="footer-social">
+                <h3>Síguenos en redes sociales</h3>
+                <div class="social-icons">
+                    <a href="#" class="youtube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="tiktok"><i class="fab fa-tiktok"></i></a>
+                    <a href="#" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Archivo JS -->
+    <script src="/js/RC.js"></script>
+    <script src="/js/footer.js"></script>
+    <script src="/js/contacto.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</body>
+
+</html>

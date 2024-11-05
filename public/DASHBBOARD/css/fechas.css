@@ -1,0 +1,147 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle, #000428, #004e92);
+    overflow-x: hidden;
+}
+
+/* Sección del calendario */
+.calendario-eventos {
+    padding: 50px;
+    text-align: center;
+    color: white;
+    background: linear-gradient(135deg, #1b0032, #3d0070, #7e2f9f, #00d4ff);
+    background-size: 400% 400%;
+    animation: fondoAnimado 20s infinite alternate;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes fondoAnimado {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+/* Título */
+.calendario-eventos h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+}
+
+/* Formulario */
+#eventoForm {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+#eventoForm input,
+#eventoForm button {
+    padding: 15px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#eventoForm input:focus {
+    outline: none;
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.5);
+}
+
+#eventoForm button {
+    background: linear-gradient(90deg, #ff8c00, #ff0080, #ff00ff, #00dbde);
+    background-size: 200% 200%;
+    color: white;
+    cursor: pointer;
+    animation: gradienteAnimado 4s infinite alternate;
+}
+
+@keyframes gradienteAnimado {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+#eventoForm button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.8);
+}
+
+/* Calendario */
+#calendar {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+    color: #fff;
+    font-size: 1.2rem;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+/* Scroll suave */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ff00ff;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ff0080;
+}
+
+.evento {
+    background: linear-gradient(135deg, #ff0080, #ff00ff, #00dbde);
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    animation: fade-in 1s forwards;
+}
+
+@keyframes fade-in {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+
+
+#eventList {
+    list-style-type: none; 
+    padding: 0;
+}
+
+#eventList li {
+    padding: 15px; 
+    margin-bottom: 10px; 
+    background-color: #fff;
+    border: 1px solid #ddd; 
+    border-radius: 4px;
+    transition: box-shadow 0.3s ease;
+}
+
+#eventList li:hover {
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+}
+
+#eventList img {
+    display: block;
+    margin-top: 10px; 
+    border-radius: 4px; 
+    max-width: 100%;
+    height: auto; 
+}
+
+
